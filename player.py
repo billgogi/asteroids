@@ -1,11 +1,10 @@
-import pygame
 import constants
 from circleshape import *
 
 class Player(CircleShape):
-    def __init__(self, x, y, radius, rotation=0):
-        super().__init__(x, y, radius)
-        self.rotation = rotation        
+    def __init__(self, x, y):
+        super().__init__(x, y, constants.PLAYER_RADIUS)
+        self.rotation = 0        
 
     def triangle(self):
         forward = pygame.Vector2(0, 1).rotate(self.rotation)
